@@ -23,9 +23,9 @@ int main(int argc, char* argv[])
 	/* open file for reading */
 	if( ( input = fopen(argv[1], "r") ) == '\0') 
 	{
-        perror("Error");
-        printf("\n");
-        return 0;
+    	perror("Error");
+    	printf("\n");
+    	return 0;
     }
 	
 	/* store contents of file */
@@ -92,7 +92,7 @@ void interpret(char program[MAXSIZE], int len)
       			{
         			do
         			{
-          				ipointer++;
+         				ipointer++;
           				
           				if(program[ipointer] == '[')
           				{ numLoops++; }
@@ -103,7 +103,7 @@ void interpret(char program[MAXSIZE], int len)
           					{ numLoops--; }
           				}
        			 	} 
-       			 	
+     			 	
        			 	while(numLoops != 0);
       			}
 				
@@ -112,7 +112,6 @@ void interpret(char program[MAXSIZE], int len)
 			case ']':
 			
 				/* skip to matching opening bracket */
-				
 				numLoops = 0;
 				
       			do 
