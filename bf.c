@@ -87,24 +87,24 @@ void interpret(char program[MAXSIZE], int len)
 				numLoops = 1;
 				
 				/* if data at pointer is 0, skip to matching closing bracket */
-      			if (tape[dpointer] == 0) 
-      			{
-        			do
-        			{
-         				ipointer++;
+      				if (tape[dpointer] == 0) 
+      				{
+        				do
+        				{
+         					ipointer++;
           				
-          				if(program[ipointer] == '[')
-          				{ numLoops++; }
+          					if(program[ipointer] == '[')
+          					{ numLoops++; }
           				
-          				else 
-          				{
-          					if(program[ipointer] == ']')
-          					{ numLoops--; }
-          				}
-       			 	} 
+          					else 
+          					{
+          						if(program[ipointer] == ']')
+          						{ numLoops--; }
+          					}
+       			 		} 
      			 	
-       			 	while(numLoops != 0);
-      			}
+       			 		while(numLoops != 0);
+      				}
 				
 				break;
 				
@@ -113,21 +113,21 @@ void interpret(char program[MAXSIZE], int len)
 				/* skip to matching opening bracket */
 				numLoops = 0;
 				
-      			do 
-      			{
-        			if(program[ipointer] == '[')
-        			{ numLoops++; }
+      				do 
+      				{
+        				if(program[ipointer] == '[')
+        				{ numLoops++; }
        				
-       				else
-       				{
-       					if(program[ipointer] == ']')
-       					{ numLoops--; }
-       				}
+       					else
+       					{
+       						if(program[ipointer] == ']')
+       						{ numLoops--; }
+       					}
         			
-        			ipointer--;
-      			} 
+        				ipointer--;
+      				} 
       			
-      			while(numLoops != 0);
+      				while(numLoops != 0);
 				
 				break;
 		}
