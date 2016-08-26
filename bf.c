@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #define MAXSIZE 30000
 
 void interpret(char program[MAXSIZE], int len);
@@ -17,7 +16,7 @@ int main(int argc, char* argv[])
 	if(strcmp(argv[1], "help") == 0) 
 	{
 		printf("Enter the file name as a command line argument\n\n");
-		exit(3);
+		return 0;
 	}
 	
 	/* open file for reading */
