@@ -23,10 +23,10 @@ int main(int argc, char* argv[])
 	/* open file for reading */
 	if( ( input = fopen(argv[1], "r") ) == '\0') 
 	{
-    	perror("Error");
-    	printf("\n");
-    	return 0;
-    }
+    		perror("Error");
+    		printf("\n");
+    		return 0;
+    	}
 	
 	/* store contents of file */
 	while (((val = fgetc(input)) != EOF) && (fileLen < MAXSIZE)) 
